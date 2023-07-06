@@ -135,8 +135,11 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
 
-
+    <div id="geometry" ></div>
+    <input id="pac-input" className="controls" type="text" placeholder="Search Box"> <br/>
     
+    <div id="map" ></div>
+
   <script>
   // This example adds a search box to a map, using the Google Place Autocomplete
 // feature. People can enter geographical searches. The search box will return a
@@ -145,7 +148,7 @@
 // parameter when you first load the API. For example:
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 function initAutocomplete() {
-  const map = new google.maps.Map(document.getElementById("mapDiv"), {
+  const map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: -33.8688, lng: 151.2195 },
     zoom: 13,
     mapTypeId: "roadmap",
@@ -197,6 +200,7 @@ function initAutocomplete() {
     
     document.getElementById('namegeo').value= place.name;
     document.getElementById('geometry').innerHTML = html;
+    
 
       const icon = {
         url: place.icon,

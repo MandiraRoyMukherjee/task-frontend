@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link,useNavigate } from "react-router-dom";
 const Signup=()=>{
     const navigate = useNavigate();
-
+    
     const handleSubmit=async(e)=>{
 
         var name = document.getElementById('name').value;
